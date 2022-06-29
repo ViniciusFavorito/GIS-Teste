@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ["./src/**/*.tsx"],
   theme: {
     extend: {
       screens: {
@@ -91,7 +91,7 @@ module.exports = {
         '9xl': '64px',
         '10xl': '80px',
       }
-  },
+    },
   },
   plugins: [],
 }

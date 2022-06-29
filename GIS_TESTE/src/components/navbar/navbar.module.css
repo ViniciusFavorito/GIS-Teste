@@ -1,0 +1,10 @@
+.link{
+    @apply text-gray-700;
+    &:hover{
+        @apply text-gray-900;
+    }
+}
+.linkActive{
+    @apply text-gray-50;
+    
+}
