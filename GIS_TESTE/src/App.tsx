@@ -1,13 +1,14 @@
-import { Navbar } from './components/navbar'
-import Home from './pages/Home'
-// import Routes from "./Routes"
+import Routes from './Routes';
+
+import './Global.css';
+import { LayoutDefault } from './layouts/default';
 
 function App() {
-
   return (
-      <Home /> 
-  )
-    
+    <LayoutDefault>
+      <Routes />
+    </LayoutDefault>
+  );
 }
 
-export default App
+export default App;
