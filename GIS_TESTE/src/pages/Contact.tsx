@@ -1,7 +1,16 @@
+import logo from '/assets/background2.jpg'
+
 export default function Contact() {
+
+    var sectionStyle = {
+        width: "100%",
+        height: "839px",
+        backgroundImage: `url(${logo})`
+    };
+
     return (
-        <>
-            <h1>Contact</h1>
-        </>
+        <div style={sectionStyle}>
+            Contato
+        </div>
     )
 }
