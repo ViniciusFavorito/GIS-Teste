@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
+    fontFamily: {
+      // 'sans': ['Montserrat'],
+    },
+
     extend: {
+      colors: {
+        teste: '#010101',
+      },
       screens: {
         xxxs: '320px',
         xxs: '360px',
