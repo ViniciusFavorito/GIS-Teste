@@ -1,3 +1,4 @@
+import { useAuth } from "../../contexts/auth";
 import { createBrowserHistory } from "history"
 import stylesNavbar from "./navbar.module.css"
 
@@ -5,6 +6,7 @@ import stylesNavbar from "./navbar.module.css"
 export function Navbar() {
 
     const history = createBrowserHistory();
+    const { signed } = useAuth();
 
     return (
         <nav className="flex flex-row gap-24 px-40 py-24 bg-teste w-full  justify-between">
@@ -23,8 +25,9 @@ export function Navbar() {
                     <a href="/contato" className={` ${history.location.pathname === "/contato" ? stylesNavbar.linkActive : stylesNavbar.link} text-2xl pt-11 text-white `}>Contato</a>
                 </li>
                 <li>
-                    <a href="/login" className={` ${history.location.pathname === "/login" ? stylesNavbar.linkActive : stylesNavbar.link} text-2xl pt-11 text-white `}>Login</a>
+                    <a href="/login" className={` ${history.location.pathname === "/login" ? stylesNavbar.linkActive : stylesNavbar.link} text-2xl pt-11 text-white `}>{signed ? "Logout" : "Login"}</a>
                 </li>
+
             </ul>
         </nav>
     );

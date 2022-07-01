@@ -2,12 +2,15 @@ import Routes from './Routes';
 
 import './Global.css';
 import { LayoutDefault } from './layouts/default';
+import { AuthProvider } from './contexts/auth';
 
 function App() {
   return (
-    <LayoutDefault>
-      <Routes />
-    </LayoutDefault>
+    <AuthProvider>
+      <LayoutDefault>
+        <Routes />
+      </LayoutDefault>
+    </AuthProvider>
   );
 }
 
