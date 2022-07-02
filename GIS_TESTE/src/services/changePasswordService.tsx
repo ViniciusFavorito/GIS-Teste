@@ -20,7 +20,6 @@ export const changePasswordService = (userEmail: string, userPassword: string, n
             }
         })
         localStorage.setItem("@users", JSON.stringify(newUser))
-        console.log(newUser)
     }
     return user
 }

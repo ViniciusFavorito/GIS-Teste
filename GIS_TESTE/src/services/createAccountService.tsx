@@ -1,7 +1,3 @@
-
-
-
-
 export const createAccountService = async (name: string, email: string, password: string) => {
 
 
@@ -9,7 +5,6 @@ export const createAccountService = async (name: string, email: string, password
 
     const users = JSON.parse(String(userNoParse)) || []
 
-    console.log(users)
     const newUsers = [...users, { name, email, password }]
     await localStorage.setItem("@users", JSON.stringify(newUsers))
     return name

@@ -1,5 +1,5 @@
 .link{
-    @apply text-gray-700;
+    @apply text-gray-400;
     &:hover{
         @apply text-gray-50;
     }

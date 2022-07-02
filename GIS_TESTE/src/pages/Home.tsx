@@ -5,8 +5,9 @@ import logo from '/assets/background2.jpg'
 
 var sectionStyle = {
     width: "100%",
-    height: "839px",
-    backgroundImage: `url(${logo})`
+    height: "calc(100vh - 88px)",
+    backgroundImage: `url(${logo})`,
+    backgroundPosition: "center"
 };
 
 export default function Home() {
