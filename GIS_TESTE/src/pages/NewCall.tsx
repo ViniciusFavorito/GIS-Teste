@@ -1,7 +1,7 @@
 
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/auth';
-import { createCallService } from '../services/createCall';
+import { createCallService } from '../services/createCallService';
 import logo from '/assets/background2.jpg'
 
 

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { authService } from '../services/authServices';
+import { authService } from '../services/authService';
 import { createBrowserHistory } from "history"
 interface IAuthData {
   email: string,

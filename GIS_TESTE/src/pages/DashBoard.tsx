@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { useAuth } from "../contexts/auth"
-import { ICreateCall } from "../services/createCall";
+import { ICreateCall } from "../services/createCallService";
 import { deleteCall } from "../services/deleteCallService";
-import { getCalls } from "../services/getCalls";
+import { getCalls } from "../services/getCallsService";
 import logo from '/assets/background2.jpg'
 
 
@@ -85,32 +85,5 @@ export function DashBoard() {
                 </div>
             </div>
         </div>
-
-
-
-        // <div>
-        //     Nosso cliente tem uma clínica odontológica e por isso precisa de um sistema <br />
-        //     <br />
-        //     para cadastrar seus paciente e GIS vai lhe ajudar<br />
-        //     <br />
-        //     Alguns requisitos funcionais:<br />
-        //     <br />
-        //     - Tela de Login<br /> Feito
-        //     - Alteração de Senha<br /> Feito
-        //     - Cadastro Atendimento<br />
-        //     : Nome<br />
-        //     : Telefone<br />
-        //     : Endereço<br />
-        //     : Data da consulta<br />
-        //     : OBS DO PACIENTE
-        //     <br />
-        //     : Dentista que será responsável pelo atendimento<br />
-        //     : Observação (O que o paciente precisa)<br />
-        //     Há, todos esses dados podemos alterar, excluir e inserir.<br />
-
-        // Meus atendimentos > Cadastrar atendimento
-
-
-        // </div>
     )
 }
