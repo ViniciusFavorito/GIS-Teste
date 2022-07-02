@@ -47,15 +47,17 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     }
   }, [])
 
-  const login = (email: string, password: string) => {
-    const user = authService(email, password)
+  const login = async (email: string, password: string) => {
+    const user = await authService(email, password)
     if (user.email) {
       setData({ name: user.name, email })
       setSigned(true)
       localStorage.setItem("@gis:email", email)
       localStorage.setItem("@gis:name", user.name)
+      navigate("/dashboard")
     } else {
       setSigned(false)
+      alert("Email ou Senha incorretos.")
     }
   }
 

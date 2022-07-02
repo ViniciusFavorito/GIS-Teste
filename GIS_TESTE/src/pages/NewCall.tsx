@@ -1,13 +1,12 @@
 
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/auth';
 import { createCallService } from '../services/createCallService';
 import logo from '/assets/background2.jpg'
 
 
 export default function NewCall() {
 
-    const navegate = useNavigate();
+    const navigate = useNavigate();
 
     var sectionStyle = {
         width: "100%",
@@ -31,7 +30,7 @@ export default function NewCall() {
         const phone = target.phone.value;
 
         await createCallService({ name, dtCall, endereco, obs, phone });
-        navegate("/dashboard")
+        navigate("/dashboard")
     }
 
     return (
@@ -75,9 +74,3 @@ export default function NewCall() {
         </div>
     )
 }
-
-// : Nome<br />
-//         //     : Telefone<br />
-//         //     : Endereço<br />
-//         //     : Data da consulta<br />
-//         //     : OBS DO PACIENTE

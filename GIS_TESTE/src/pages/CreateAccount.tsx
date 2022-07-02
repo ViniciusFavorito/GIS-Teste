@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { createAccountService } from '../services/createAccountService';
+import { emailValidadeService } from '../services/emailValidadeService';
 import logo from '/assets/background2.jpg'
 
 
@@ -13,7 +14,7 @@ export function CreateAccount() {
         backgroundPosition: "center"
     };
 
-    const navegate = useNavigate();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e: React.SyntheticEvent) => {
         e.preventDefault();
@@ -27,18 +28,26 @@ export function CreateAccount() {
         const password = target.password.value;
         const name = target.name.value;
         const confirmPassword = target.confirmPassword.value;
+
         if (email === "") {
-            alert("O campo E-mail n„o pode ficar vazio.")
-        } else if (name === "") {
-            alert("O campo Nome n„o pode ficar vazio.")
-        } else if (password === "") {
-            alert("O campo Password n„o pode ficar vazio.")
-        } else if (confirmPassword !== password) {
-            alert('As senhas digitadas n„o s„o iguais.')
-        } else {
-            await createAccountService(name, email, password);
-            navegate("/login")
+            return alert("O campo E-mail n√£o pode ficar vazio.")
         }
+        if (name === "") {
+            return alert("O campo Nome n√£o pode ficar vazio.")
+        }
+        if (password === "") {
+            return alert("O campo Password n√£o pode ficar vazio.")
+        }
+        if (confirmPassword !== password) {
+            return alert('As senhas digitadas n√£o s√£o iguais.')
+        }
+        const invalidEmail = await emailValidadeService(email)
+        if (invalidEmail) {
+            return alert("E-mail j√° cadastrado")
+        }
+        await createAccountService(name, email, password);
+        navigate("/login")
+
     }
 
 

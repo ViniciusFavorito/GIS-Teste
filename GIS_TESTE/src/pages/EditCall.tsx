@@ -19,7 +19,7 @@ export interface ICall {
 
 export default function EditCall() {
 
-    const navegate = useNavigate();
+    const navigate = useNavigate();
     const history = createBrowserHistory();
     const [call, setCall] = useState<ICall>({} as ICall);
 
@@ -50,7 +50,7 @@ export default function EditCall() {
         const phone = target.phone.value;
 
         await editCallService({ id: call.id, name, dtCall, endereco, obs, phone });
-        navegate("/dashboard")
+        navigate("/dashboard")
     }
 
     return (

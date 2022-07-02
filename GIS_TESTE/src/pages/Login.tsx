@@ -6,7 +6,6 @@ import logo from '/assets/background2.jpg'
 
 export default function LoginPage() {
 
-    const navegate = useNavigate();
     const { login } = useAuth();
     var sectionStyle = {
         width: "100%",
@@ -24,7 +23,7 @@ export default function LoginPage() {
         const email = target.email.value;
         const password = target.password.value;
         await login(email, password);
-        navegate("/dashboard")
+
     }
 
     return (

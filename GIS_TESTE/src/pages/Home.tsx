@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar } from '../components/navbar';
 import logo from '/assets/background2.jpg'
 
 var sectionStyle = {
