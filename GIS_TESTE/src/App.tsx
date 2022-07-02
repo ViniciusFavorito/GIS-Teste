@@ -1,6 +1,6 @@
 import Routes from './Routes';
 
-import './Global.css';
+import './styles/global.css';
 import { LayoutDefault } from './layouts/default';
 import { AuthProvider } from './contexts/auth';
 import { BrowserRouter } from 'react-router-dom';
